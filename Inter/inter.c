@@ -6,7 +6,7 @@
 /*   By: jmeulema <jmeulema@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 15:43:07 by jmeulema          #+#    #+#             */
-/*   Updated: 2022/09/12 16:26:21 by jmeulema         ###   ########.fr       */
+/*   Updated: 2022/09/12 16:58:18 by jmeulema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int	main(int ac, char **av)
 				if ((av[1][i] == av[2][j]) && check_repeat(av[1], av[1][i], i) == 1)
 				{
 					write (1, &av[1][i], 1);
-					break;
+					break ;
 				}
 				j++;
 			}
