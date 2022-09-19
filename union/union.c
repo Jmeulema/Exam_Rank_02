@@ -6,7 +6,7 @@
 /*   By: jmeulema <jmeulema@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 15:46:10 by jmeulema          #+#    #+#             */
-/*   Updated: 2022/09/12 18:45:03 by jmeulema         ###   ########.fr       */
+/*   Updated: 2022/09/16 10:57:07 by jmeulema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	check_repeat(char *str, char c, int n)
 	return (1);
 }
 
-void	ft_strlcat(char *s1, char *s2)
+void	ft_strjoin(char *s1, char *s2)
 {
 	int	i;
 	int	j;
@@ -35,7 +35,7 @@ void	ft_strlcat(char *s1, char *s2)
 	j = 0;
 	while (s1[i])
 		i++;
-	while (s2[i])
+	while (s2[j])
 	{
 		s1[i] = s2[j];
 		i++;
@@ -51,13 +51,14 @@ int	main(int ac, char **av)
 	i = 0;
 	if (ac == 3)
 	{
-		ft_strlcat(av[1], av[2]);
+		ft_strjoin(av[1], av[2]);
 		while (av[1][i])
 		{
-			if (check_repeat(av[1], av[1][i], i) == 1)
+			if (check_repeat(av[1], av[1][i], i))
 				write (1, &av[1][i], 1);
 			i++;
 		}
 	}
 	write (1, "\n", 1);
+	return (0);
 }

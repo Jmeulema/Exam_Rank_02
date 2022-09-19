@@ -6,7 +6,7 @@
 /*   By: jmeulema <jmeulema@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 17:57:23 by jmeulema          #+#    #+#             */
-/*   Updated: 2022/09/12 18:45:09 by jmeulema         ###   ########.fr       */
+/*   Updated: 2022/09/19 10:09:19 by jmeulema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,19 +19,19 @@ int	ft_print_char(char c)
 	return (1);
 }
 
-int	ft_print_str(const char *s1)
+int	ft_print_str(const char *str)
 {
 	int	i;
 
 	i = 0;
-	if (!s1)
+	if (!str)
 	{
 		write(1, "(null)", 6);
 		return (6);
 	}
-	while (s1[i])
+	while (str[i])
 	{
-		write (1, &s1[i], 1);
+		write (1, &str[i], 1);
 		i++;
 	}
 	return (i);
@@ -69,7 +69,7 @@ int	ft_print_hexa(unsigned int n)
 		len += ft_print_hexa(n / 16);
 		len += ft_print_hexa(n % 16);
 	}
-	else if (n > 9)
+	if (n > 9)
 		len += ft_print_char(n + 87);
 	else
 		len += ft_print_char(n + 48);
@@ -96,7 +96,7 @@ int	ft_printf(const char *format, ...)
 				len += ft_print_str(va_arg(arg, char *));
 			else if (format[i] == 'x')
 				len += ft_print_hexa(va_arg(arg, unsigned int));
-			if (format[i] == 'd')
+			else if (format[i] == 'd')
 				len += ft_print_nbr(va_arg(arg, int));
 		}
 	}
