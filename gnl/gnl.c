@@ -6,13 +6,11 @@
 /*   By: jmeulema <jmeulema@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 17:02:24 by jmeulema          #+#    #+#             */
-/*   Updated: 2022/09/19 10:09:56 by jmeulema         ###   ########.fr       */
+/*   Updated: 2022/09/22 14:12:00 by jmeulema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
-#include <stdlib.h>
-#define BUFFER_SIZE 42
 
 int	ft_strlen(char *str)
 {
