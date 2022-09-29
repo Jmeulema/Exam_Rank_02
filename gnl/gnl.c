@@ -6,7 +6,7 @@
 /*   By: jmeulema <jmeulema@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 17:02:24 by jmeulema          #+#    #+#             */
-/*   Updated: 2022/09/22 14:12:00 by jmeulema         ###   ########.fr       */
+/*   Updated: 2022/09/23 15:29:52 by jmeulema         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,7 @@ int	ft_strlen(char *str)
 
 	i = 0;
 	while (str[i])
-	{
 		i++;
-	}
 	return (i);
 }
 
